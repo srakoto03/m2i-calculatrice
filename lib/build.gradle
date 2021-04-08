@@ -56,8 +56,10 @@ task checkstyleMain (type: Checkstyle, overwrite: true){
 }
 
 pmd {
+    ignoreFailures =true
     consoleOutput = true
-    toolVersion = "6.33.0"
+    toolVersion = "6.21.0"
+    pmdTest.enabled=false
     rulesMinimumPriority = 5
     ruleSets = ["category/java/errorprone.xml",
     	        "category/java/bestpractices.xml",
