@@ -12,7 +12,7 @@ plugins {
     id 'jacoco'
     id 'checkstyle'
     id "com.github.spotbugs" version "4.7.0"
-    id 'pmd'
+    
 }
 
 repositories {
@@ -51,6 +51,6 @@ task checkstyleMain (type: Checkstyle, overwrite: true){
 	include '**/*.java'
 	exclude '**/gen/**'
 	classpath = fileTree("${project.buildDir}/classes/java/main")
-	configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
+	configFile = file("${rootProject.rootDir}/lib/config/checkstyle/checkstyle.xml")
 	
 }
