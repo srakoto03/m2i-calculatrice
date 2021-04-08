@@ -12,7 +12,7 @@ plugins {
     id 'jacoco'
     id 'checkstyle'
     id "com.github.spotbugs" version "4.7.0"
-    
+    id 'pmd'
 }
 
 repositories {
@@ -53,4 +53,16 @@ task checkstyleMain (type: Checkstyle, overwrite: true){
 	classpath = fileTree("${project.buildDir}/classes/java/main")
 	configFile = file("${rootProject.rootDir}/lib/config/checkstyle/checkstyle.xml")
 	
+}
+
+pmd {
+    consoleOutput = true
+    toolVersion = "6.33.0"
+    rulesMinimumPriority = 5
+    ruleSets = ["category/java/errorprone.xml",
+    	        "category/java/bestpractices.xml",
+    	        "category/java/codestyle.xml",
+    	        "category/java/documentation.xml",
+    	        "category/java/security.xml"
+    	       ]
 }
