@@ -8,8 +8,8 @@ public class Application {
 		
 		// test automatique jenkins
 		System.out.println("Test plannification");
-		Calculator calc = new Calculator();
-		int result = calc.add(3, 6);
+		//Calculator calc = new Calculator();
+		//int result = calc.add(3, 6);
 
 	}
 
