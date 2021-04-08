@@ -56,6 +56,17 @@ public class CalculatorTest {
 		assertTrue(actual);
 	}
 	
+	@Test
+	public void isPremier() {
+		 Calculator calc = new Calculator();
+	 
+		 boolean actual = calc.isPremier(17);
+		 
+		 assertTrue(true);
+		 
+		 
+	}
+	
 	
 	
  
