@@ -11,13 +11,13 @@ plugins {
     id 'java-library'
     id 'jacoco'
     id "com.github.spotbugs" version "4.7.0"
-    //id 'checkstyle'
+    id 'checkstyle'
     id 'pmd'
 }
 
 repositories {
     // Use JCenter for resolving dependencies.
-    //mavencentral()
+    mavencentral()
     jcenter()
 }
 
